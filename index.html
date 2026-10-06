@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Movies</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Disney Movies: CinemaCity</h2>
+
+        <table class="table table-bordered align-middle text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Image of the movie</th>
+                    <th>Name of the movie</th>
+                    <th>Main character name</th>
+                    <th>Rating</th>
+                    <th>Price/ticket</th>
+                    <th>Type</th>
+                    <th>Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                  <tr data-rating="2">
+                    <td>1</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/he/2/23/LionKingCharacters.jpg?utm_source=he.wikipedia.org&utm_campaign=index&utm_content=original"></td>
+                    <td>The Lion King</td>
+                    <td><a href="https://he.wikipedia.org/wiki/%D7%A1%D7%99%D7%9E%D7%91%D7%94">Simba</a></td>
+                    <td class="rating-val">2</td>
+                    <td class="price-val">100</td>
+                    <td>VIP</td>
+                    <td><button class="btn btn-primary buy-btn">Buy</button></td>
+                </tr>
+
+                   <tr data-rating="1">
+                    <td>2</td>
+                    <td><img src="https://kanyonmamtakim.co.il/wp-content/uploads/2022/06/3839d5e37ace70d0d82a7ff5c018e619.jpg"></td>
+                    <td>Frozen</td>
+                    <td><a href="https://he.wikipedia.org/wiki/%D7%A4%D7%9C%D7%95%D7%A0%D7%98%D7%A8_(%D7%A1%D7%A8%D7%98)">Elsa</a></td>
+                    <td class="rating-val">1</td>
+                    <td class="price-val">70</td>
+                    <td>REGULAR</td>
+                    <td><button class="btn btn-primary buy-btn">Buy</button></td>
+                </tr>
+
+                    <tr data-rating="5">
+                    <td>3</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/he/c/c3/Aladdin-1992-large-picture.jpg?utm_source=he.wikipedia.org&utm_campaign=index&utm_content=original"></td>
+                    <td>Aladdin</td>
+                    <td><a href="https://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%90%D7%93%D7%99%D7%9F_(%D7%93%D7%9E%D7%95%D7%AA_%D7%93%D7%99%D7%A1%D7%A0%D7%99)">Aladdin</a></td>
+                    <td class="rating-val">5</td>
+                    <td class="price-val">70</td>
+                    <td>REGULAR</td>
+                    <td><button class="btn btn-primary buy-btn">Buy</button></td>
+                </tr>
+
+                    <tr data-rating="4">
+                    <td>4</td>
+                    <td><img src="https://www.fantastic-library.com/wp-content/uploads/2016/12/Moana-Disney-03.jpg"></td>
+                    <td>Moana</td>
+                    <td><a href="https://he.wikipedia.org/wiki/%D7%9E%D7%95%D7%90%D7%A0%D7%94_(%D7%93%D7%9E%D7%95%D7%AA_%D7%93%D7%99%D7%A1%D7%A0%D7%99)">Moana</a></td>
+                    <td class="rating-val">4</td>
+                    <td class="price-val">100</td>
+                    <td>VIP</td>
+                    <td><button class="btn btn-primary buy-btn">Buy</button></td>
+                </tr>
+
+                    <tr data-rating="1">
+                    <td>5</td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqZcCtysBQ1JDCzlbJGJqMBvtJinB6aEmtXAg99UbaZMrhc0HgaT9uPV7M&s=10"></td>
+                    <td>Tangled</td>
+                    <td><a href="https://he.wikipedia.org/wiki/%D7%A8%D7%A4%D7%95%D7%A0%D7%96%D7%9C_(%D7%93%D7%9E%D7%95%D7%AA_%D7%93%D7%99%D7%A1%D7%A0%D7%99)">Rapunzel</a></td>
+                    <td class="rating-val">1</td>
+                    <td class="price-val">70</td>
+                    <td>REGULAR</td>
+                    <td><button class="btn btn-primary buy-btn">Buy</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<div id="booking-section" class="card shadow-sm p-4 mt-4" style="display: none; max-width: 500px; margin: 0 auto; background-color: #f8f9fa;">
+    <h3 class="text-center mb-3 text-primary">Movie Ticket Booking</h3>
+    
+    <div class="mb-3">
+        <label class="form-label fw-bold">Name of the store movie: <span id="form-movie-name" class="text-danger"></span></label>
+    </div>
+    
+    <div class="mb-3">
+        <label class="form-label fw-bold">Price per ticket: <span id="form-movie-price"></span>$</label>
+    </div>
+    
+    <div class="mb-3">
+        <label for="ticket-count" class="form-label fw-bold">Number of ticket (Max 5):</label>
+        <input type="number" id="ticket-count" class="form-control" value="1" min="1" max="5">
+    </div>
+    
+    <div class="mb-3">
+        <label for="credit-card" class="form-label fw-bold">Credit Card number:</label>
+        <input type="text" id="credit-card" class="form-control" placeholder="xxx xxx xxx xxx" required>
+    </div>
+    
+    <div class="mb-3">
+        <label for="exp-date" class="form-label fw-bold">Date of expiration:</label>
+        <input type="text" id="exp-date" class="form-control" placeholder="xx/xx/xxxx" required>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="fw-bold text-success">Total: <span id="form-total-price">0</span>$</h4>
+    </div>
+    
+    <button type="button" id="send-btn" class="btn btn-success w-100 py-2 fw-bold">Send</button>
+</div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

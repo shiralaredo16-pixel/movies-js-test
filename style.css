@@ -1,0 +1,32 @@
+body {
+    background-color: #f4f6f9;
+}
+
+h2 {
+    color: #0a0505;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
+
+td img {
+    width: 60px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+tr[data-rating="1"] td {
+    background-color: #e5abaf !important;
+}
+
+tr[data-rating="3"] td,
+tr[data-rating="4"] td,
+tr[data-rating="5"] td {
+    background-color: #91a79e !important;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 2px solid #0a0505 !important;
+    box-shadow: inset 0.5px #090909;
+}
+
+
